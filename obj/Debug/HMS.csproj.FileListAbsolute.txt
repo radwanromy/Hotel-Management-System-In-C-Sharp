@@ -12,3 +12,17 @@ C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\Guna.UI2.dll
 C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.csproj.CopyComplete
 C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.Dashboard.resources
 C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.All_User_Control.UC_AddRoom.resources
+C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.exe.config
+C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\MySql.Data.dll
+C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\Google.Protobuf.dll
+C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\Zstandard.Net.dll
+C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\Renci.SshNet.dll
+C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\System.Memory.dll
+C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\System.Buffers.dll
+C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\MySql.Data.xml
