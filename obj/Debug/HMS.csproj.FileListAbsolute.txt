@@ -1,0 +1,14 @@
+C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\HMS.exe.config
+C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\HMS.exe
+C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\HMS.pdb
+C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.csprojAssemblyReference.cache
+C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.Form1.resources
+C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.Properties.Resources.resources
+C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.csproj.GenerateResource.cache
+C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.csproj.CoreCompileInputs.cache
+C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.exe
+C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.pdb
+C:\Users\RadwanRomy\source\repos\HMS\HMS\bin\Debug\Guna.UI2.dll
+C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.csproj.CopyComplete
+C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.Dashboard.resources
+C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.All_User_Control.UC_AddRoom.resources
