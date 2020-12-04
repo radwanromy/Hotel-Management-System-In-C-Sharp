@@ -39,5 +39,15 @@ namespace HMS
             con.Close();
             MessageBox.Show(" '" + message + "' ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        public MySqlDataReader getForCombo(String query)
+        {
+            MySqlConnection con = getConnection();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Connection = con;
+            con.Open();
+            cmd = new MySqlCommand(query, con);
+            MySqlDataReader sdr = cmd.ExecuteReader();
+            return sdr;
+        }
     }
 }
