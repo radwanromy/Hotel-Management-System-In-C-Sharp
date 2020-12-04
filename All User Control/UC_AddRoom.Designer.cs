@@ -113,6 +113,7 @@
             this.DataGridView1.ThemeStyle.RowsStyle.Height = 22;
             this.DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DataGridView1.Enter += new System.EventHandler(this.DataGridView1_Enter);
             // 
             // label2
             // 
@@ -169,7 +170,6 @@
             this.txtRoomNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtRoomNo.DisabledState.Parent = this.txtRoomNo;
             this.txtRoomNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRoomNo.FillColor = System.Drawing.Color.Transparent;
             this.txtRoomNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRoomNo.FocusedState.Parent = this.txtRoomNo;
             this.txtRoomNo.Font = new System.Drawing.Font("Segoe UI", 11.25F);
@@ -281,6 +281,7 @@
             this.btnAddRoom.Size = new System.Drawing.Size(180, 45);
             this.btnAddRoom.TabIndex = 11;
             this.btnAddRoom.Text = "Add Room";
+            this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
             // 
             // UC_AddRoom
             // 
@@ -303,6 +304,8 @@
             this.Name = "UC_AddRoom";
             this.Size = new System.Drawing.Size(1297, 505);
             this.Load += new System.EventHandler(this.UC_AddRoom_Load);
+            this.Enter += new System.EventHandler(this.UC_AddRoom_Enter);
+            this.Leave += new System.EventHandler(this.UC_AddRoom_Leave);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

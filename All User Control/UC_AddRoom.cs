@@ -31,7 +31,48 @@ namespace HMS.All_User_Control
             query = "select * from rooms";
             DataSet ds= fn.getData(query);
             DataGridView1.DataSource = ds.Tables[0];
-            
+        }
+
+        private void btnAddRoom_Click(object sender, EventArgs e)
+        {
+            if(txtRoomNo.Text!="" && txtType.Text!="" && txtBed.Text!="" && txtPrice.Text != "")
+            {
+                String roomno = txtRoomNo.Text;
+                String type = txtType.Text;
+                String bed = txtBed.Text;
+                Int64 price = Int64.Parse(txtPrice.Text);
+                query = "insert into rooms (roomNo,roomType,bed,price) values ('"+roomno+"','"+type+"','"+bed+"',"+price+")";
+                fn.setData(query, "Room Added.");
+
+                UC_AddRoom_Load(this,null);
+                clearAll();
+            }
+            else
+            {
+                MessageBox.Show("Fill All Firlds.", "Warning !!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        public void clearAll()
+        {
+            txtRoomNo.Clear();
+            txtType.SelectedIndex = -1;
+            txtBed.SelectedIndex = -1;
+            txtPrice.Clear();
+        }
+
+        private void UC_AddRoom_Leave(object sender, EventArgs e)
+        {
+            clearAll();
+        }
+
+        private void DataGridView1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UC_AddRoom_Enter(object sender, EventArgs e)
+        {
+            UC_AddRoom_Load(this, null);
         }
     }
 }

@@ -25,6 +25,8 @@ namespace HMS
         private void btnCustomerRegistration_Click(object sender, EventArgs e)
         {
             movingPanel.Left = btnCustomerRegistration.Left+60;
+            uC_CustomerRegistration1.Visible = true;
+            uC_CustomerRegistration1.BringToFront();
         }
 
         private void btnAddRoom_Click(object sender, EventArgs e)
@@ -57,6 +59,8 @@ namespace HMS
         private void Dashboard_Load(object sender, EventArgs e)
         {
             uC_AddRoom1.Visible = false;
+            uC_CustomerRegistration1.Visible = false;
+            btnAddRoom.PerformClick();
         }
     }
 }
