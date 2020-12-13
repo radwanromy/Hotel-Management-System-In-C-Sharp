@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using MySql.Data.MySqlClient;
 
 namespace HMS.All_User_Control
 {
@@ -41,8 +40,9 @@ namespace HMS.All_User_Control
                 String roomno = txtRoomNo.Text;
                 String type = txtType.Text;
                 String bed = txtBed.Text;
+                String booked = txtBooked.Text;
                 Int64 price = Int64.Parse(txtPrice.Text);
-                query = "insert into rooms (roomNo,roomType,bed,price) values ('"+roomno+"','"+type+"','"+bed+"',"+price+")";
+                query = "insert into rooms (roomNo,roomType,bed,price, booked) values ('"+roomno+"','"+type+"','"+bed+"',"+price+ ", '"+booked+"' )";
                 fn.setData(query, "Room Added.");
 
                 UC_AddRoom_Load(this,null);

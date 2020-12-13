@@ -6,32 +6,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 namespace HMS
 {
     class function
     {
-        protected MySqlConnection getConnection()
+        protected SqlConnection getConnection()
         {
-            MySqlConnection con = new MySqlConnection();
-            con.ConnectionString = "datasource = localhost; username=root;password=;database=myHotel; integrated security = True";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = "data source = DESKTOP-CPV8G9B\\SQLEXPRESS; database=myHotel; integrated security = True";
             return con;
         }
         public DataSet getData(String query)
         {
-            MySqlConnection con = getConnection();
-            MySqlCommand cmd = new MySqlCommand();
+            SqlConnection con = getConnection();
+            SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             cmd.CommandText = query;
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
             return ds;
         }
         public void setData(String query, String message)
         {
-            MySqlConnection con = getConnection();
-            MySqlCommand cmd = new MySqlCommand();
+            SqlConnection con = getConnection();
+            SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             con.Open();
             cmd.CommandText = query;
@@ -39,14 +38,14 @@ namespace HMS
             con.Close();
             MessageBox.Show(" '" + message + "' ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-        public MySqlDataReader getForCombo(String query)
+        public SqlDataReader getForCombo(String query)
         {
-            MySqlConnection con = getConnection();
-            MySqlCommand cmd = new MySqlCommand();
+            SqlConnection con = getConnection();
+            SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             con.Open();
-            cmd = new MySqlCommand(query, con);
-            MySqlDataReader sdr = cmd.ExecuteReader();
+            cmd = new SqlCommand(query, con);
+            SqlDataReader sdr = cmd.ExecuteReader();
             return sdr;
         }
     }

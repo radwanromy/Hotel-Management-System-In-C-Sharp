@@ -12,6 +12,8 @@ namespace HMS
 {
     public partial class Form1 : Form
     {
+        function fn = new function();
+        String query;
         public Form1()
         {
             InitializeComponent();
@@ -29,12 +31,15 @@ namespace HMS
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if(txtUsername.Text == "romy" && txtPassword.Text == "pass")
+            query = "select username , pass from employee where username = '"+txtUsername.Text+"' and pass ='"+txtPassword.Text+"' ";
+            DataSet ds = fn.getData(query);
+
+            if (ds.Tables[0].Rows.Count !=0)
             {
                 labelError.Visible = false;
-                Dashboard ds = new Dashboard();
+                Dashboard das = new Dashboard();
                 this.Hide();
-                ds.Show();
+                das.Show();
             }
             else
             {
@@ -44,6 +49,11 @@ namespace HMS
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

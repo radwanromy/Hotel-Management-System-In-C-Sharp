@@ -612,6 +612,8 @@
             this.Controls.Add(this.label1);
             this.Name = "UC_CustomerRegistration";
             this.Size = new System.Drawing.Size(1297, 505);
+            this.Load += new System.EventHandler(this.UC_CustomerRegistration_Load);
+            this.Leave += new System.EventHandler(this.UC_CustomerRegistration_Leave);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

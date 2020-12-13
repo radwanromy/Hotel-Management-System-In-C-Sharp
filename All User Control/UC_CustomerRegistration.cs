@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using MySql.Data.MySqlClient;
 
 namespace HMS.All_User_Control
 {
@@ -22,7 +21,7 @@ namespace HMS.All_User_Control
         }
         public void setComboBox(String query, ComboBox combo)
         {
-            MySqlDataReader sdr = fn.getForCombo(query);
+            SqlDataReader sdr = fn.getForCombo(query);
             while(sdr.Read())
             {
                 for(int i=0; i<sdr.FieldCount; i++)
@@ -37,7 +36,8 @@ namespace HMS.All_User_Control
         private void txtRoom_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtRoomNo.Items.Clear();
-            query = "select roomNo from rooms where bed = '" + txtBed.Text + "' and roomType='" + txtRoom.Text + "' and booked = 'NO' ";
+            txtPrice.Clear();
+            query = "select roomNo from rooms where bed = '" + txtBed.Text + "' and roomType ='" + txtRoom.Text + "' and booked = 'NO' ";
             setComboBox(query, txtRoomNo);
         }
 
@@ -50,7 +50,7 @@ namespace HMS.All_User_Control
         int rid;
         private void txtRoomNo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            query = "select price, roomid from rooms where roomNo = '"+txtRoomNo.Text+"' ";
+            query = "select price,roomid from rooms where roomNo = '" + txtRoomNo.Text + "' ";
             DataSet ds = fn.getData(query);
             txtPrice.Text = ds.Tables[0].Rows[0][0].ToString();
             rid =int.Parse( ds.Tables[0].Rows[0][1].ToString());
@@ -58,7 +58,7 @@ namespace HMS.All_User_Control
 
         private void btnAlloteRoom_Click(object sender, EventArgs e)
         {
-            if(txtName.Text != "" && txtContact.Text != "" && txtNationality.Text != "" && txtGender.Text != "" && txtDob.Text != "" && txtIdProof.Text != "" && txtAddress.Text != "" && txtCheckIn.Text != "" && txtPrice.Text != "")
+            if (txtName.Text != "" && txtContact.Text != "" && txtNationality.Text != "" && txtGender.Text != "" && txtDob.Text != "" && txtIdProof.Text != "" && txtAddress.Text != "" && txtCheckIn.Text != "" && txtPrice.Text != "")
             {
                 String name = txtName.Text;
                 Int64 mobile = Int64.Parse(txtContact.Text);
@@ -68,13 +68,42 @@ namespace HMS.All_User_Control
                 String idproof = txtIdProof.Text;
                 String address = txtAddress.Text;
                 String checkin = txtCheckIn.Text;
-                query = "insert into customer(cname	, mobile,nationality,gender,dob,idproof,addres,checkin,roomid) values ('"+name+"',"+mobile+",'"+national+"','"+gender+"','"+dob+"','"+idproof+"','"+address+"','"+checkin+"','"+rid+ "') UPDATE rooms SET SET booked = 'YES'  WHERE roomNo = '" + txtRoomNo.Text+"'" ;
+                
+                query = " insert into customer (cname, mobile,nationality,gender,dob,idproof,addres,checkin,roomid) values ('" + name+"',"+mobile+",'"+national+"','"+gender+"','"+dob+"','"+idproof+"','"+address+"','"+checkin+"',"+rid+ ") UPDATE rooms SET booked = 'YES'  WHERE roomNo = '" + txtRoomNo.Text + "'  ";
+                //query = "insert into rooms booked value 'YES'";
                 fn.setData(query, "Room No "+ txtRoomNo.Text +" Allocation Successful.");
+                /* UPDATE rooms SET booked = 'YES'  WHERE roomNo = '" + txtRoomNo.Text +"' */
+                clearAll();
             }
             else
             {
                 MessageBox.Show("All Fields Are Madetory. ", "Information !!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+        }
+        public void clearAll()
+        {
+            txtName.Clear();
+            txtContact.Clear();
+            txtNationality.Clear();
+            txtGender.SelectedIndex = -1;
+            txtDob.ResetText();
+            txtIdProof.Clear();
+            txtAddress.Clear();
+            txtCheckIn.ResetText();
+            txtBed.SelectedIndex = -1;
+            txtRoom.SelectedIndex = -1;
+            txtRoomNo.Items.Clear();
+            txtPrice.Clear();
+        }
+
+        private void UC_CustomerRegistration_Leave(object sender, EventArgs e)
+        {
+            clearAll();
+        }
+
+        private void UC_CustomerRegistration_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -38,16 +38,22 @@ namespace HMS
 
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
+            uC_CustomerCheckOut1.Visible = true;
+            uC_CustomerCheckOut1.BringToFront();
             movingPanel.Left = btnCheckOut.Left + 7;
         }
 
         private void btnCustomerDetails_Click(object sender, EventArgs e)
         {
+            customerDetails1.Visible = true;
+            customerDetails1.BringToFront();
             movingPanel.Left = btnCustomerDetails.Left + 45;
         }
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
+            uC_Employee1.Visible = true;
+            uC_Employee1.BringToFront();
             movingPanel.Left = btnEmployee.Left + 12;
         }
 
@@ -58,6 +64,8 @@ namespace HMS
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            uC_Employee1.Visible = false;
+            customerDetails1.Visible = false;
             uC_AddRoom1.Visible = false;
             uC_CustomerRegistration1.Visible = false;
             btnAddRoom.PerformClick();

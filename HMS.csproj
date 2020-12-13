@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -53,17 +68,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="All User Control\CustomerDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All User Control\CustomerDetails.Designer.cs">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="All User Control\UC_AddRoom.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="All User Control\UC_AddRoom.Designer.cs">
       <DependentUpon>UC_AddRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="All User Control\UC_CustomerCheckOut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All User Control\UC_CustomerCheckOut.Designer.cs">
+      <DependentUpon>UC_CustomerCheckOut.cs</DependentUpon>
+    </Compile>
     <Compile Include="All User Control\UC_CustomerRegistration.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="All User Control\UC_CustomerRegistration.Designer.cs">
       <DependentUpon>UC_CustomerRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="All User Control\UC_Employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="All User Control\UC_Employee.Designer.cs">
+      <DependentUpon>UC_Employee.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -80,11 +113,20 @@
     <Compile Include="function.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="All User Control\CustomerDetails.resx">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="All User Control\UC_AddRoom.resx">
       <DependentUpon>UC_AddRoom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="All User Control\UC_CustomerCheckOut.resx">
+      <DependentUpon>UC_CustomerCheckOut.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="All User Control\UC_CustomerRegistration.resx">
       <DependentUpon>UC_CustomerRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All User Control\UC_Employee.resx">
+      <DependentUpon>UC_Employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -113,6 +155,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

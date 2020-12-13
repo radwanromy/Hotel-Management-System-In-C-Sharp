@@ -42,6 +42,8 @@
             this.txtType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtBed = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnAddRoom = new Guna.UI2.WinForms.Guna2Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtBooked = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,7 +122,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(695, 77);
+            this.label2.Location = new System.Drawing.Point(700, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 20);
             this.label2.TabIndex = 3;
@@ -132,7 +134,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(695, 142);
+            this.label3.Location = new System.Drawing.Point(700, 137);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 20);
             this.label3.TabIndex = 4;
@@ -143,7 +145,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(694, 212);
+            this.label4.Location = new System.Drawing.Point(699, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 20);
             this.label4.TabIndex = 5;
@@ -154,7 +156,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(694, 285);
+            this.label5.Location = new System.Drawing.Point(699, 280);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 20);
             this.label5.TabIndex = 6;
@@ -173,10 +175,10 @@
             this.txtRoomNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRoomNo.FocusedState.Parent = this.txtRoomNo;
             this.txtRoomNo.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txtRoomNo.ForeColor = System.Drawing.Color.White;
+            this.txtRoomNo.ForeColor = System.Drawing.Color.Black;
             this.txtRoomNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRoomNo.HoverState.Parent = this.txtRoomNo;
-            this.txtRoomNo.Location = new System.Drawing.Point(698, 102);
+            this.txtRoomNo.Location = new System.Drawing.Point(703, 97);
             this.txtRoomNo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtRoomNo.Name = "txtRoomNo";
             this.txtRoomNo.PasswordChar = '\0';
@@ -203,7 +205,7 @@
             this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.HoverState.Parent = this.txtPrice;
-            this.txtPrice.Location = new System.Drawing.Point(699, 317);
+            this.txtPrice.Location = new System.Drawing.Point(704, 312);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '\0';
@@ -230,7 +232,7 @@
             "AC",
             "Non-AC"});
             this.txtType.ItemsAppearance.Parent = this.txtType;
-            this.txtType.Location = new System.Drawing.Point(699, 164);
+            this.txtType.Location = new System.Drawing.Point(704, 159);
             this.txtType.Name = "txtType";
             this.txtType.ShadowDecoration.Parent = this.txtType;
             this.txtType.Size = new System.Drawing.Size(401, 36);
@@ -254,7 +256,7 @@
             "Double",
             "Triple"});
             this.txtBed.ItemsAppearance.Parent = this.txtBed;
-            this.txtBed.Location = new System.Drawing.Point(699, 234);
+            this.txtBed.Location = new System.Drawing.Point(704, 229);
             this.txtBed.Name = "txtBed";
             this.txtBed.ShadowDecoration.Parent = this.txtBed;
             this.txtBed.Size = new System.Drawing.Size(401, 36);
@@ -275,7 +277,7 @@
             this.btnAddRoom.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddRoom.ForeColor = System.Drawing.Color.Black;
             this.btnAddRoom.HoverState.Parent = this.btnAddRoom;
-            this.btnAddRoom.Location = new System.Drawing.Point(919, 380);
+            this.btnAddRoom.Location = new System.Drawing.Point(925, 376);
             this.btnAddRoom.Name = "btnAddRoom";
             this.btnAddRoom.ShadowDecoration.Parent = this.btnAddRoom;
             this.btnAddRoom.Size = new System.Drawing.Size(180, 45);
@@ -283,12 +285,52 @@
             this.btnAddRoom.Text = "Add Room";
             this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 11.25F);
+            this.label6.Location = new System.Drawing.Point(700, 386);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Booked";
+            // 
+            // txtBooked
+            // 
+            this.txtBooked.BackColor = System.Drawing.Color.Transparent;
+            this.txtBooked.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBooked.DefaultText = "NO";
+            this.txtBooked.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBooked.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBooked.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBooked.DisabledState.Parent = this.txtBooked;
+            this.txtBooked.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBooked.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBooked.FocusedState.Parent = this.txtBooked;
+            this.txtBooked.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtBooked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBooked.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBooked.HoverState.Parent = this.txtBooked;
+            this.txtBooked.Location = new System.Drawing.Point(767, 376);
+            this.txtBooked.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBooked.Name = "txtBooked";
+            this.txtBooked.PasswordChar = '\0';
+            this.txtBooked.PlaceholderText = "Booked?";
+            this.txtBooked.SelectedText = "";
+            this.txtBooked.SelectionStart = 2;
+            this.txtBooked.ShadowDecoration.Parent = this.txtBooked;
+            this.txtBooked.Size = new System.Drawing.Size(50, 41);
+            this.txtBooked.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtBooked.TabIndex = 13;
+            // 
             // UC_AddRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.txtBooked);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnAddRoom);
             this.Controls.Add(this.txtBed);
             this.Controls.Add(this.txtType);
@@ -325,5 +367,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox txtType;
         private Guna.UI2.WinForms.Guna2ComboBox txtBed;
         private Guna.UI2.WinForms.Guna2Button btnAddRoom;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2TextBox txtBooked;
     }
 }
