@@ -23,18 +23,18 @@ namespace HMS.All_User_Control
         {
             if(txtSearchBy.SelectedIndex==0)
             {
-                query = "select customer.cid, customer.cname,customer.mobile,customer.nationality,customer.gender,customer.dob,customer.idproof,customer.addres,customer.checkin,rooms.roomNo,rooms.roomType,rooms.bed,rooms.price from customer inner join rooms on customer.roomid = rooms.roomid ";
+                query = "select customer.cid, customer.cname,customer.mobile,customer.nationality,customer.gender,customer.dob,customer.idproof,customer.addres,customer.checkin,room.roomNo,room.roomType,room.bed,room.price from customer inner join room on customer.roomid = room.roomid ";
                 getRecord(query);
             }
             else if (txtSearchBy.SelectedIndex == 1)
             {
-                query = "select customer.cid, customer.cname,customer.mobile,customer.nationality,customer.gender,customer.dob,customer.idproof,customer.addres,customer.checkin,rooms.roomNo,rooms.roomType,rooms.bed,rooms.price from customer inner join rooms on customer.roomid = rooms.roomid where chekout is null";
+                query = "select customer.cid, customer.cname,customer.mobile,customer.nationality,customer.gender,customer.dob,customer.idproof,customer.addres,customer.checkin,room.roomNo,room.roomType,room.bed,room.price from customer inner join room on customer.roomid = room.roomid where chekout  = 'No' ";
                 getRecord(query);
 
             }
             else if (txtSearchBy.SelectedIndex == 2)
             {
-                query = "select customer.cid, customer.cname,customer.mobile,customer.nationality,customer.gender,customer.dob,customer.idproof,customer.addres,customer.checkin,rooms.roomNo,rooms.roomType,rooms.bed,rooms.price from customer inner join rooms on customer.roomid = rooms.roomid where chekout is not null";
+                query = "select customer.cid, customer.cname,customer.mobile,customer.nationality,customer.gender,customer.dob,customer.idproof,customer.addres,customer.checkin,room.roomNo,room.roomType,room.bed,room.price from customer inner join room on customer.roomid = room.roomid where chekout  = 'Yes' ";
                 getRecord(query);
             }
         }
@@ -42,6 +42,11 @@ namespace HMS.All_User_Control
         {
             DataSet ds = fn.getData(query);
             dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

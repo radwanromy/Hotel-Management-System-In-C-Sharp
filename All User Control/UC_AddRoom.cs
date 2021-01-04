@@ -28,7 +28,7 @@ namespace HMS.All_User_Control
 
         private void UC_AddRoom_Load(object sender, EventArgs e)
         {
-            query = "select * from rooms";
+            query = "select * from room";
             DataSet ds= fn.getData(query);
             DataGridView1.DataSource = ds.Tables[0];
         }
@@ -37,12 +37,14 @@ namespace HMS.All_User_Control
         {
             if(txtRoomNo.Text!="" && txtType.Text!="" && txtBed.Text!="" && txtPrice.Text != "")
             {
+                String location = txtLocation.Text;
+                String quality = txtQuality.Text;
                 String roomno = txtRoomNo.Text;
                 String type = txtType.Text;
                 String bed = txtBed.Text;
                 String booked = txtBooked.Text;
                 Int64 price = Int64.Parse(txtPrice.Text);
-                query = "insert into rooms (roomNo,roomType,bed,price, booked) values ('"+roomno+"','"+type+"','"+bed+"',"+price+ ", '"+booked+"' )";
+                query = "insert into room (roomNo,roomType,bed,price, booked, location, quality) values ('" + roomno+"','"+type+"','"+bed+"',"+price+ ", '"+booked+ "' ,'" + location + "','" + quality + "')";
                 fn.setData(query, "Room Added.");
 
                 UC_AddRoom_Load(this,null);
@@ -74,6 +76,21 @@ namespace HMS.All_User_Control
         private void UC_AddRoom_Enter(object sender, EventArgs e)
         {
             UC_AddRoom_Load(this, null);
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

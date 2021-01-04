@@ -116,5 +116,10 @@ namespace HMS.All_User_Control
         {
             clearAll();
         }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

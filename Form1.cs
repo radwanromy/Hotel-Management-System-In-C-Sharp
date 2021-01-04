@@ -36,6 +36,7 @@ namespace HMS
 
             if (ds.Tables[0].Rows.Count !=0)
             {
+                btnForgetPassword.Visible = false;
                 labelError.Visible = false;
                 Dashboard das = new Dashboard();
                 this.Hide();
@@ -43,6 +44,7 @@ namespace HMS
             }
             else
             {
+                btnForgetPassword.Visible = true;
                 labelError.Visible = true;
                 txtPassword.Clear();
             }
@@ -54,6 +56,41 @@ namespace HMS
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnForgetPassword_Click(object sender, EventArgs e)
+        {
+            label4.Visible = true;
+            guna2DataGridView1.Visible = true;
+            setEmployee(guna2DataGridView1);
+
+            /*
+            query = "select username from employee where username = '" + txtUsername.Text + "'  ";
+            DataSet ds = fn.getData(query);
+
+            if (ds.Tables[0].Rows.Count != 0)
+            {
+                btnForgetPassword.Visible = false;
+                labelError.Visible = false;
+                
+            }
+            else
+            {
+                btnForgetPassword.Visible = true;
+                labelError.Visible = true;
+                txtPassword.Clear();
+            } */
+        }
+        public void setEmployee(DataGridView data)
+        {
+            query = "select pass from employee where username = '" + txtUsername.Text + "' ";
+            DataSet dss = fn.getData(query);
+            data.DataSource = dss.Tables[0];
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

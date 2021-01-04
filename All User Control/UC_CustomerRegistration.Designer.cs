@@ -61,6 +61,10 @@
             this.label13 = new System.Windows.Forms.Label();
             this.btnAlloteRoom = new Guna.UI2.WinForms.Guna2Button();
             this.txtRoom = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtLocation = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtQuality = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -576,6 +580,83 @@
             this.txtRoom.TabIndex = 29;
             this.txtRoom.SelectedIndexChanged += new System.EventHandler(this.txtRoom_SelectedIndexChanged);
             // 
+            // txtLocation
+            // 
+            this.txtLocation.BackColor = System.Drawing.Color.Transparent;
+            this.txtLocation.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtLocation.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLocation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLocation.FocusedState.Parent = this.txtLocation;
+            this.txtLocation.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtLocation.ForeColor = System.Drawing.Color.Black;
+            this.txtLocation.HoverState.Parent = this.txtLocation;
+            this.txtLocation.ItemHeight = 30;
+            this.txtLocation.Items.AddRange(new object[] {
+            "Mymensingh",
+            "Rajshahi",
+            "Dhaka",
+            "Chittagong",
+            "Khulna",
+            "Barisal",
+            "Sylhet",
+            "Rangpur"});
+            this.txtLocation.ItemsAppearance.Parent = this.txtLocation;
+            this.txtLocation.Location = new System.Drawing.Point(471, 355);
+            this.txtLocation.Name = "txtLocation";
+            this.txtLocation.ShadowDecoration.Parent = this.txtLocation;
+            this.txtLocation.Size = new System.Drawing.Size(331, 36);
+            this.txtLocation.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtLocation.TabIndex = 31;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(467, 330);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(66, 20);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "Location";
+            // 
+            // txtQuality
+            // 
+            this.txtQuality.BackColor = System.Drawing.Color.Transparent;
+            this.txtQuality.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtQuality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtQuality.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuality.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQuality.FocusedState.Parent = this.txtQuality;
+            this.txtQuality.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txtQuality.ForeColor = System.Drawing.Color.Black;
+            this.txtQuality.HoverState.Parent = this.txtQuality;
+            this.txtQuality.ItemHeight = 30;
+            this.txtQuality.Items.AddRange(new object[] {
+            "5 Star Hotel",
+            "4 Star Hotel",
+            "3 Star Hotel",
+            "2 Star Hotel",
+            "1 Star Hotel"});
+            this.txtQuality.ItemsAppearance.Parent = this.txtQuality;
+            this.txtQuality.Location = new System.Drawing.Point(471, 432);
+            this.txtQuality.Name = "txtQuality";
+            this.txtQuality.ShadowDecoration.Parent = this.txtQuality;
+            this.txtQuality.Size = new System.Drawing.Size(331, 36);
+            this.txtQuality.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtQuality.TabIndex = 33;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(467, 407);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 20);
+            this.label15.TabIndex = 32;
+            this.label15.Text = "Quality";
+            // 
             // UC_CustomerRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -583,6 +664,10 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.txtQuality);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.txtLocation);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.txtRoom);
             this.Controls.Add(this.btnAlloteRoom);
             this.Controls.Add(this.txtPrice);
@@ -650,5 +735,9 @@
         private Guna.UI2.WinForms.Guna2TextBox txtAddress;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2ComboBox txtRoom;
+        private Guna.UI2.WinForms.Guna2ComboBox txtQuality;
+        private System.Windows.Forms.Label label15;
+        private Guna.UI2.WinForms.Guna2ComboBox txtLocation;
+        private System.Windows.Forms.Label label14;
     }
 }

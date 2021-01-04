@@ -24,14 +24,14 @@ namespace HMS.All_User_Control
 
         private void UC_CustomerCheckOut_Load(object sender, EventArgs e)
         {
-            query = "select customer.cid, customer.cname,customer.mobile,customer.nationality,customer.gender,customer.dob,customer.idproof,customer.addres,customer.checkin,rooms.roomNo,rooms.roomType,rooms.bed,rooms.price from customer inner join rooms on customer.roomid = rooms.roomid where chekout = 'No' ";
+            query = "select customer.cid, customer.cname,customer.mobile,customer.nationality,customer.gender,customer.dob,customer.idproof,customer.addres,customer.checkin,room.roomNo,room.roomType,room.bed,room.price from customer inner join room on customer.roomid = room.roomid where chekout = 'NO' ";
             DataSet ds = fn.getData(query);
             DataGridView2.DataSource = ds.Tables[0];
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            query = "select customer.cid, customer.cname,customer.mobile,customer.nationality,customer.gender,customer.dob,customer.idproof,customer.addres,customer.checkin,rooms.roomNo,rooms.roomType,rooms.bed,rooms.price from customer inner join rooms on customer.roomid = rooms.roomid where cname like '"+txtName.Text+"%'and chekout = 'No' ";
+            query = "select customer.cid, customer.cname,customer.mobile,customer.nationality,customer.gender,customer.dob,customer.idproof,customer.addres,customer.checkin,room.roomNo,room.roomType,room.bed,room.price from customer inner join room on customer.roomid = room.roomid where cname like '"+txtName.Text+"%'and chekout = 'NO' ";
             DataSet ds = fn.getData(query);
             DataGridView2.DataSource = ds.Tables[0];
         }
@@ -52,7 +52,7 @@ namespace HMS.All_User_Control
                 if (MessageBox.Show("Are You Sure?", " Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                 {
                     String cdate = txtCheckOutDate.Text;
-                    query = "update customer set chekout = 'YES', checkout='" + cdate + "' where cid = " + id + " update rooms set booked = 'NO' where roomNo = '" + txtRoomNo.Text + "'";
+                    query = "update customer set chekout = 'YES', checkout='" + cdate + "' where cid = " + id + " update room set booked = 'NO' where roomNo = '" + txtRoomNo.Text + "'";
                     fn.setData(query, "Check Out Successfull.");
                     UC_CustomerCheckOut_Load(this, null);
                     clearALL();
