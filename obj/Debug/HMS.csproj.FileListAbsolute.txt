@@ -30,3 +30,4 @@ C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.All_User_Control.UC_Custo
 C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.All_User_Control.UC_CustomerCheckOut.resources
 C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.All_User_Control.CustomerDetails.resources
 C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.All_User_Control.UC_Employee.resources
+C:\Users\RadwanRomy\source\repos\HMS\HMS\obj\Debug\HMS.Form2.resources
